@@ -35,14 +35,14 @@ constructor(private tutorialService: TutorialService) {
   // Refresh the tutorials list
   refreshList(){
     this.retrieveTutorials();
-    this.currentIndex = null;
+    this.currentTutorial = null;
     this.currentIndex = -1;
 
   }
   
   // Set the active tutorial
   setActiveTutorial(tutorial, index){
-    this.currentIndex = tutorial;
+    this.currentTutorial = tutorial;
     this.currentIndex = index;
   }
 
