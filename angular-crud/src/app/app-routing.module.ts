@@ -7,9 +7,9 @@ import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.com
 
 const routes: Routes = [
     { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
-    { path: 'tutorials', component: TutorialsDetailsComponent },
-    { path: 'tutorials/:id', component: AddTutorialComponent }
-
+    { path: 'tutorials', component: TutorialsListComponent },
+    { path: 'tutorials/:id', component: TutorialsDetailsComponent },
+    { path: 'add', component: AddTutorialComponent }
 ];
 
 @NgModule({

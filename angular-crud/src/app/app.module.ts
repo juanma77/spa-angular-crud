@@ -5,11 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
+import { TutorialsDetailsComponent } from './components/tutorials-details/tutorials-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTutorialComponent
+    AddTutorialComponent,
+    TutorialsListComponent,
+    TutorialsDetailsComponent
   ],
   imports: [
     FormsModule,
