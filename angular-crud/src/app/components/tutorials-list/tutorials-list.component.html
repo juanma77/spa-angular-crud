@@ -1,7 +1,7 @@
 <div class="list-row">
     <div class="col-md-8">
         <div class="input-groups mb-3">
-            <input type="text" class="form-control" placeholder="Search by title" [(ngModel)] = "title"/>
+            <input type="text" class="form-control" placeholder="Type the Tutorial title" [(ngModel)] = "title"/>
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" (click)="searchTitle()">Search</button>
             </div>
@@ -13,7 +13,7 @@
             <li class="list-group-item" *ngFor="let tutorial of tutorials; let i = index" [class.active] = "i == currentIndex" (click)="setActiveTutorial(tutorial, i)"> {{ tutorial.title }}
             </li>
         </ul>
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">Remove All</button>
+    <button class="btn btn-danger" (click)="removeAllTutorials()">Remove All</button>
     </div>
     <div class="col-md-6">
         <div *ngIf="currentTutorial">
@@ -27,11 +27,11 @@
         <div>
             <strong>Status:</strong>{{ currentTutorial.published ? "Published" : "Pending" }}
         </div>
-        <a class="badge badge-warning" href="/tutorials/{{ currentTutorial.id }}">Edit</a>
+        <a class="btn btn-warning" href="/tutorials/{{ currentTutorial.id }}">Edit</a>
         </div>
         <div *ngIf="!currentTutorial">
             <br>
-            <p>Please click on a Tutorial</p>
+            <p>Click on a Tutorial to see details</p>
         </div>
     </div>
 </div>

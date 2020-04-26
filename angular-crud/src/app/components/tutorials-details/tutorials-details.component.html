@@ -1,5 +1,5 @@
 <div *ngIf="currentTutorial" class="edit-form">
-    <h4>Tutorial</h4>
+    <h4>Tutorial Details</h4>
     <form>
         <div class="form-group">
             <label for="title">Title</label>
@@ -14,10 +14,10 @@
             {{ currentTutorial.published ? "Published" : "Pending" }}
         </div>
     </form>
-    <button class="badge badge-primary mr-2" *ngIf="currentTutorial.published" (click)="updatePublished(false)">Unpublish</button>
-    <button class="badge badge-primary mr-2" *ngIf="!currentTutorial.published" (click)="updatePublished(true)">Publish</button>
-    <button class="badge badge-primary mr-2" (click)="deleteTutorial()">Delete</button>
-    <button class="badge badge-success" (click)="updateTutorial()" type="submit">Update</button>
+    <button class="btn btn-secondary" *ngIf="currentTutorial.published" (click)="updatePublished(false)">Unpublish</button>
+    <button class="btn btn-success" *ngIf="!currentTutorial.published" (click)="updatePublished(true)">Publish</button>
+    <button class="btn btn-danger" (click)="deleteTutorial()">Delete</button>
+    <button class="btn btn-warning" (click)="updateTutorial()" type="submit">Update</button>
     <p>{{ message }}</p>
 </div>
 <div *ngIf="!currentTutorial">
